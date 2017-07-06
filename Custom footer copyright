@@ -1,0 +1,14 @@
+<?php
+//* Customize the footer copyright
+add_filter( 'genesis_footer_output', 'kat_custom_footer' );
+function kat_custom_footer( $output ) {
+$str_date = date('Y');	
+$str_bloginfo = get_bloginfo('name');
+$str1 = 'Site designed and maintained by ';
+$str2 = 'Kattero - Websites for Nonprofits';
+
+       $output = sprintf( '<p>Copyright %s &copy; - %s</p><p>%s <a href="https://kattero.com/">%s</a></p>', $str_date, $str_bloginfo, $str1 , $str2 );
+
+    return $output;
+ 
+}
