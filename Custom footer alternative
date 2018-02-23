@@ -1,0 +1,10 @@
+//* Customize the footer copyright
+add_filter( 'genesis_footer_output', 'kat_custom_footer' );
+function kat_custom_footer() {
+$str_date = date('Y');	
+$str_bloginfo = get_bloginfo('name');
+
+	echo "<p>Copyright &copy; " . $str_date . " Kattero &bull; All Rights Reserved &bull; <a href=\"#\"> Accessibility Information</a></p>";
+   
+ 
+}
